@@ -1,0 +1,948 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE dotfuscatorMap SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscatorMap_v1.2.dtd">
+<dotfuscatorMap version="1.1">
+    <header>
+        <timestamp>2021-02-02T10:49:05</timestamp>
+        <product version="5.44.0.10087" user="Kevin Ren" serial="342927-391">Dotfuscator Community</product>
+    </header>
+    <mapping>
+        <module>
+            <name>Watson.exe</name>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;</name>
+                <newname>n</newname>
+                <methodlist />
+                <fieldlist>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=100</signature>
+                        <name>06F306EF307E7E2839C41882508A5D4BFF049253FB1EB6A60A1FA88A83569BDB</name>
+                        <newname>a</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=44</signature>
+                        <name>0DFD20DF011B234B4696784ED454390CEC334F35FF89BBFA11FF521AB3AB179E</name>
+                        <newname>b</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=68</signature>
+                        <name>150443A21D8376329BCD905A9A72F58436CA4E8872B0F83D23D058187787CF73</name>
+                        <newname>c</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=84</signature>
+                        <name>17F376784BCA812476857F950CE762E07E593E28DDCD3BD31A5DD08D554A0F73</name>
+                        <newname>d</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=48</signature>
+                        <name>1AB7C890BD2B5EB62CAACDC6E83022CFC3675A4E1576C86027B6E46866849FE6</name>
+                        <newname>e</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=108</signature>
+                        <name>1ABB1070D042FECBB8EE96B1FB377B4BA183EA344FA0EDF26BD4DB3615FCBAA4</name>
+                        <newname>f</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=96</signature>
+                        <name>1ADE28FA9B2988F3BD42F80DDDEA255C930220FECA84BA4FDFB3D7025823BFD4</name>
+                        <newname>g</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=64</signature>
+                        <name>263B1CF44BFD8335288F92602C2356642BC5DC82E9D1094E6FAF246F6ABF590F</name>
+                        <newname>h</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=124</signature>
+                        <name>2AA63AE98B0D71B451F042B498F65C23EEA99D06A47A3C962E6EA5EC674CA397</name>
+                        <newname>i</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=56</signature>
+                        <name>36310309A491381D08469DE53692C3FDB8E1EE12B40132120882D67235C90CCE</name>
+                        <newname>j</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=68</signature>
+                        <name>4DDC52531B145945644D73A8A020EB205B4458C478AD8BBA170F81D618D9C8A3</name>
+                        <newname>k</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=92</signature>
+                        <name>5639B1F5851FC5179B9E117EDE37D2C1F291766E7AA8DE710926DAAD3007A099</name>
+                        <newname>l</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=16</signature>
+                        <name>5E50F89DBD1B98FA99F251FFC40EC32772CF97025078515A89F39F11EF91CFE4</name>
+                        <newname>m</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=92</signature>
+                        <name>637554EC7502D6D2484D6DDBD4EF64F16A76D24F20BD5C6F8B73E54BBAC5D774</name>
+                        <newname>n</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=68</signature>
+                        <name>65A97DBAED383074FD89E3941566A9599B2CC5D8FE09F415D804B6B2F35D1743</name>
+                        <newname>o</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=92</signature>
+                        <name>708EEFC0D54FE9DFFDDB5B00C35DF7DFCB3BD90B133BFB30D039C8A0105113ED</name>
+                        <newname>p</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=128</signature>
+                        <name>8FA12187E34934D529FAB0FDA6101CF1A6CBBF4F1962F23145FA724E671AB019</name>
+                        <newname>q</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=72</signature>
+                        <name>93156F1ECB40B9C9DBA89805375012009992DA3BBEF7464AB46148AD55361AB6</name>
+                        <newname>r</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=48</signature>
+                        <name>97A20BF10FBEE6D31771D0998B88BF4B8A7EA78F7AC3701A579608A31C9C3B95</name>
+                        <newname>s</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=84</signature>
+                        <name>97D82A61D638D5EC3E9944599B2DFF2F7D62443992F7F4ED3A340DFB54CFCE37</name>
+                        <newname>t</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=100</signature>
+                        <name>9C499529E8CFBF4B4AA88E184D6280BD6C78603D00A82A431BB11EEB01B6186D</name>
+                        <newname>u</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=52</signature>
+                        <name>9DF50A37A36B9EF0BBF0E523CD7365EC206D647CD0ADBC0BEC3CD9A30C0D8418</name>
+                        <newname>v</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=72</signature>
+                        <name>A1EA516C9BB192D975A14E5D7017D04DAAA4F65B852DBCD2054C8BB333AEED50</name>
+                        <newname>w</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=36</signature>
+                        <name>A245BAD2BD694966BAAFEF0AA78C0AC4049B5EA81E99771719AEC1A06574B7AF</name>
+                        <newname>x</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=52</signature>
+                        <name>AAD3F8AD6CB19BAD91D8ED08B4E753E9F7C7E242535BD5F1B9FC6B825AF2A917</name>
+                        <newname>y</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=140</signature>
+                        <name>AC28D75814F81EBF12E5FE98B8C539670772A748428263C5DA79E4942C7C8E15</name>
+                        <newname>z</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=112</signature>
+                        <name>B4126E80ABC280902BD0DFEABAA24D1EA345ABE02CCF451635BDB1BE2BA5B2D7</name>
+                        <newname>aa</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=48</signature>
+                        <name>B9C7E90C8075C3784161B1305107A67291302C958ED6D708619AEF6CDCD882CC</name>
+                        <newname>ab</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=132</signature>
+                        <name>BBB8DE4BDF3AAD479ABA7D5C52E5E2D207D7A3991517DFD6E1FC83395E7A1AD0</name>
+                        <newname>ac</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=64</signature>
+                        <name>BF885AA1421DEAE4BFFBAE0E85D6B78628E8AA21086ECEBEB6FC80C41C7EFCBA</name>
+                        <newname>ad</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=108</signature>
+                        <name>C419E7DA47B0183F56CC18A401A625950806CCFE737BBBB59079F1FDED42C0DE</name>
+                        <newname>ae</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=120</signature>
+                        <name>C7E557C101203C9C263D558831994E2BF02DF17494A8C45BE03AE92151DCB689</name>
+                        <newname>af</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=152</signature>
+                        <name>C899A2CBFA6AF14C5AEF76C3A73652B4B32B8ADA193E17225F3B2F63FF85CE49</name>
+                        <newname>ag</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=120</signature>
+                        <name>CB6D0D366AF371C2FFBAA11044060204B30EA305D53A199EBA39F73C5A35E8F1</name>
+                        <newname>ah</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=116</signature>
+                        <name>E0EAE54A422AEC51E2372E4A8AC098E3ACF5147DBBFF2372772DDC1E13354584</name>
+                        <newname>ai</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=52</signature>
+                        <name>E237378973F01FA1C8059C4069864923716A0715FECF0846B4742CE1C9506F8F</name>
+                        <newname>aj</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=80</signature>
+                        <name>E662A1EE8A9966B7DD69B83AEAF07C3D33DE7FE990D6AE58F7B81BE41CED33BA</name>
+                        <newname>ak</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=88</signature>
+                        <name>E7D588BD9747716D18010D5EAADF32A80C4D270606F3D781F052F4F0F285C6FF</name>
+                        <newname>al</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=76</signature>
+                        <name>EAE5F538E03FE4BBF2371C1BCFD487FEA3249E8F5B510C0238DD52B7D17CB175</name>
+                        <newname>am</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=68</signature>
+                        <name>EF64A89C5F3F856C3712AC59FD9B6BA6DA9F81D212AF0AC342C21DE1AE045C65</name>
+                        <newname>an</newname>
+                    </field>
+                    <field>
+                        <signature>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=132</signature>
+                        <name>F1BAE2A56E3A304D5D27544B763CAABDC3555D0FB1731D49F1D593477A9BA194</name>
+                        <newname>ao</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=100</name>
+                <newname>n/p</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=108</name>
+                <newname>n/q</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=112</name>
+                <newname>n/r</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=116</name>
+                <newname>n/s</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=120</name>
+                <newname>n/t</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=124</name>
+                <newname>n/u</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=128</name>
+                <newname>n/v</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=132</name>
+                <newname>n/w</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=140</name>
+                <newname>n/x</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=152</name>
+                <newname>n/y</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=16</name>
+                <newname>n/a</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=36</name>
+                <newname>n/b</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=44</name>
+                <newname>n/c</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=48</name>
+                <newname>n/d</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=52</name>
+                <newname>n/e</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=56</name>
+                <newname>n/f</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=64</name>
+                <newname>n/g</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=68</name>
+                <newname>n/h</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=72</name>
+                <newname>n/i</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=76</name>
+                <newname>n/j</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=80</name>
+                <newname>n/k</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=84</name>
+                <newname>n/l</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=88</name>
+                <newname>n/m</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=92</name>
+                <newname>n/n</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>&lt;PrivateImplementationDetails&gt;/__StaticArrayInitTypeSize=96</name>
+                <newname>n/o</newname>
+                <methodlist />
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Info</name>
+                <methodlist>
+                    <method>
+                        <signature>void()</signature>
+                        <name>.ctor</name>
+                    </method>
+                    <method>
+                        <signature>void()</signature>
+                        <name>PrintLogo</name>
+                    </method>
+                </methodlist>
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Msrc.CVE_2019_0836</name>
+                <newname>j</newname>
+                <methodlist>
+                    <method>
+                        <signature>void(Watson.VulnerabilityCollection, int32, System.Collections.Generic.List`1&lt;int32&gt;)</signature>
+                        <name>Check</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>name</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Msrc.CVE_2019_0841</name>
+                <newname>m</newname>
+                <methodlist>
+                    <method>
+                        <signature>void(Watson.VulnerabilityCollection, int32, System.Collections.Generic.List`1&lt;int32&gt;)</signature>
+                        <name>Check</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>name</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Msrc.CVE_2019_1064</name>
+                <newname>l</newname>
+                <methodlist>
+                    <method>
+                        <signature>void(Watson.VulnerabilityCollection, int32, System.Collections.Generic.List`1&lt;int32&gt;)</signature>
+                        <name>Check</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>name</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Msrc.CVE_2019_1130</name>
+                <newname>k</newname>
+                <methodlist>
+                    <method>
+                        <signature>void(Watson.VulnerabilityCollection, int32, System.Collections.Generic.List`1&lt;int32&gt;)</signature>
+                        <name>Check</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>name</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Msrc.CVE_2019_1253</name>
+                <newname>b</newname>
+                <methodlist>
+                    <method>
+                        <signature>void(Watson.VulnerabilityCollection, int32, System.Collections.Generic.List`1&lt;int32&gt;)</signature>
+                        <name>Check</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>name</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Msrc.CVE_2019_1315</name>
+                <newname>i</newname>
+                <methodlist>
+                    <method>
+                        <signature>void(Watson.VulnerabilityCollection, int32, System.Collections.Generic.List`1&lt;int32&gt;)</signature>
+                        <name>Check</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>name</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Msrc.CVE_2019_1385</name>
+                <newname>c</newname>
+                <methodlist>
+                    <method>
+                        <signature>void(Watson.VulnerabilityCollection, int32, System.Collections.Generic.List`1&lt;int32&gt;)</signature>
+                        <name>Check</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>name</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Msrc.CVE_2019_1388</name>
+                <newname>h</newname>
+                <methodlist>
+                    <method>
+                        <signature>void(Watson.VulnerabilityCollection, int32, System.Collections.Generic.List`1&lt;int32&gt;)</signature>
+                        <name>Check</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>name</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Msrc.CVE_2019_1405</name>
+                <newname>g</newname>
+                <methodlist>
+                    <method>
+                        <signature>void(Watson.VulnerabilityCollection, int32, System.Collections.Generic.List`1&lt;int32&gt;)</signature>
+                        <name>Check</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>name</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Msrc.CVE_2020_0668</name>
+                <newname>d</newname>
+                <methodlist>
+                    <method>
+                        <signature>void(Watson.VulnerabilityCollection, int32, System.Collections.Generic.List`1&lt;int32&gt;)</signature>
+                        <name>Check</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>name</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Msrc.CVE_2020_0683</name>
+                <newname>e</newname>
+                <methodlist>
+                    <method>
+                        <signature>void(Watson.VulnerabilityCollection, int32, System.Collections.Generic.List`1&lt;int32&gt;)</signature>
+                        <name>Check</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>name</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Msrc.CVE_2020_1013</name>
+                <newname>f</newname>
+                <methodlist>
+                    <method>
+                        <signature>void(Watson.VulnerabilityCollection, int32, System.Collections.Generic.List`1&lt;int32&gt;)</signature>
+                        <name>Check</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>name</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Program</name>
+                <newname>a</newname>
+                <methodlist>
+                    <method>
+                        <signature>void()</signature>
+                        <name>.ctor</name>
+                    </method>
+                    <method>
+                        <signature>void(string[])</signature>
+                        <name>Main</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Vulnerability</name>
+                <methodlist>
+                    <method>
+                        <signature>void(string, string[])</signature>
+                        <name>.ctor</name>
+                    </method>
+                    <method>
+                        <signature>void()</signature>
+                        <name>SetAsVulnerable</name>
+                    </method>
+                    <method>
+                        <signature>string()</signature>
+                        <name>get_Identification</name>
+                    </method>
+                    <method>
+                        <signature>string[]()</signature>
+                        <name>get_KnownExploits</name>
+                    </method>
+                    <method>
+                        <signature>bool()</signature>
+                        <name>get_Vulnerable</name>
+                    </method>
+                    <method>
+                        <signature>void(bool)</signature>
+                        <name>set_Vulnerable</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>&lt;Identification&gt;k__BackingField</name>
+                        <newname>a</newname>
+                    </field>
+                    <field>
+                        <signature>string[]</signature>
+                        <name>&lt;KnownExploits&gt;k__BackingField</name>
+                        <newname>b</newname>
+                    </field>
+                    <field>
+                        <signature>bool</signature>
+                        <name>&lt;Vulnerable&gt;k__BackingField</name>
+                        <newname>c</newname>
+                    </field>
+                </fieldlist>
+                <propertylist>
+                    <property>
+                        <signature>string()</signature>
+                        <name>Identification</name>
+                    </property>
+                    <property>
+                        <signature>string[]()</signature>
+                        <name>KnownExploits</name>
+                    </property>
+                    <property>
+                        <signature>bool()</signature>
+                        <name>Vulnerable</name>
+                    </property>
+                </propertylist>
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.VulnerabilityCollection</name>
+                <methodlist>
+                    <method>
+                        <signature>void()</signature>
+                        <name>.ctor</name>
+                    </method>
+                    <method>
+                        <signature>System.Collections.Generic.List`1&lt;Watson.Vulnerability&gt;()</signature>
+                        <name>Populate</name>
+                        <newname>a</newname>
+                    </method>
+                    <method>
+                        <signature>void(string)</signature>
+                        <name>SetAsVulnerable</name>
+                    </method>
+                    <method>
+                        <signature>void()</signature>
+                        <name>ShowResults</name>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>System.Collections.Generic.List`1&lt;Watson.Vulnerability&gt;</signature>
+                        <name>_vulnerabilities</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.VulnerabilityCollection/&lt;&gt;c</name>
+                <methodlist>
+                    <method>
+                        <signature>void()</signature>
+                        <name>.cctor</name>
+                    </method>
+                    <method>
+                        <signature>void()</signature>
+                        <name>.ctor</name>
+                    </method>
+                    <method>
+                        <signature>bool(Watson.Vulnerability)</signature>
+                        <name>&lt;ShowResults&gt;b__3_0</name>
+                        <newname>b</newname>
+                    </method>
+                    <method>
+                        <signature>bool(Watson.Vulnerability)</signature>
+                        <name>&lt;ShowResults&gt;b__3_1</name>
+                        <newname>c</newname>
+                    </method>
+                    <method>
+                        <signature>bool(Watson.Vulnerability)</signature>
+                        <name>&lt;ShowResults&gt;b__3_2</name>
+                        <newname>a</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>Watson.VulnerabilityCollection/&lt;&gt;c</signature>
+                        <name>&lt;&gt;9</name>
+                    </field>
+                    <field>
+                        <signature>System.Func`2&lt;Watson.Vulnerability,bool&gt;</signature>
+                        <name>&lt;&gt;9__3_0</name>
+                    </field>
+                    <field>
+                        <signature>System.Func`2&lt;Watson.Vulnerability,bool&gt;</signature>
+                        <name>&lt;&gt;9__3_1</name>
+                    </field>
+                    <field>
+                        <signature>System.Func`2&lt;Watson.Vulnerability,bool&gt;</signature>
+                        <name>&lt;&gt;9__3_2</name>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.VulnerabilityCollection/&lt;&gt;c__DisplayClass1_0</name>
+                <newname>Watson.VulnerabilityCollection/a</newname>
+                <methodlist>
+                    <method>
+                        <signature>void()</signature>
+                        <name>.ctor</name>
+                    </method>
+                    <method>
+                        <signature>bool(Watson.Vulnerability)</signature>
+                        <name>&lt;SetAsVulnerable&gt;b__0</name>
+                        <newname>b</newname>
+                    </method>
+                </methodlist>
+                <fieldlist>
+                    <field>
+                        <signature>string</signature>
+                        <name>id</name>
+                        <newname>a</newname>
+                    </field>
+                </fieldlist>
+                <propertylist />
+                <eventlist />
+            </type>
+            <type>
+                <name>Watson.Wmi</name>
+                <methodlist>
+                    <method>
+                        <signature>void()</signature>
+                        <name>.ctor</name>
+                    </method>
+                    <method>
+                        <signature>int32()</signature>
+                        <name>GetBuildNumber</name>
+                    </method>
+                    <method>
+                        <signature>System.Collections.Generic.List`1&lt;int32&gt;()</signature>
+                        <name>GetInstalledKBs</name>
+                    </method>
+                </methodlist>
+                <fieldlist />
+                <propertylist />
+                <eventlist />
+            </type>
+        </module>
+    </mapping>
+    <statistics>
+        <statisticline>
+            <description>Total Classes</description>
+            <statistic>45</statistic>
+        </statisticline>
+        <statisticline>
+            <description>Total Methods</description>
+            <statistic>36</statistic>
+        </statisticline>
+        <statisticline>
+            <description>Total Fields</description>
+            <statistic>62</statistic>
+        </statisticline>
+        <statisticline>
+            <description>Total Properties</description>
+            <statistic>3</statistic>
+        </statisticline>
+        <statisticline>
+            <description>Total Events</description>
+            <statistic>0</statistic>
+        </statisticline>
+        <statisticline>
+            <description>Total Classes Renamed</description>
+            <statistic>40</statistic>
+            <statistic>88.89 %</statistic>
+        </statisticline>
+        <statisticline>
+            <description>Total Methods Renamed</description>
+            <statistic>19</statistic>
+            <statistic>52.78 %</statistic>
+        </statisticline>
+        <statisticline>
+            <description>Total Fields Renamed</description>
+            <statistic>58</statistic>
+            <statistic>93.55 %</statistic>
+        </statisticline>
+        <statisticline>
+            <description>Total Properties Renamed</description>
+            <statistic>0</statistic>
+            <statistic>0.00 %</statistic>
+        </statisticline>
+        <statisticline>
+            <description>Total Events Renamed</description>
+            <statistic>0</statistic>
+            <statistic>0.00 %</statistic>
+        </statisticline>
+        <statisticline>
+            <description>Methods Renamed to 'a'</description>
+            <statistic>16</statistic>
+            <statistic>44.44 %</statistic>
+        </statisticline>
+        <statisticline>
+            <description>Methods Renamed to 'b'</description>
+            <statistic>2</statistic>
+            <statistic>5.56 %</statistic>
+        </statisticline>
+        <statisticline>
+            <description>Methods Renamed to 'c'</description>
+            <statistic>1</statistic>
+            <statistic>2.78 %</statistic>
+        </statisticline>
+    </statistics>
+</dotfuscatorMap>
