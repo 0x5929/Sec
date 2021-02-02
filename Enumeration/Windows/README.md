@@ -5,38 +5,38 @@ Some shortcuts to download some of the binaries in this sub directory:
 
 
 # WINPEAS
-__Any CPU arch__ : 
+**Any CPU arch**: 
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/winPEAS-AnyCPU-release.exe`
 
-__x86 32bit__: 
+**x86 32bit**: 
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/winPEAS-x86-release.exe`
 
-__x64 64bit__: 
+**x64 64bit**: 
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/winPEAS-x64-release.exe`
 
-__Obfuscated any CPU arch__:
+**Obfuscated any CPU arch**:
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/Dotfuscated/winPEAS-AnyCPU-release.exe`
 
-__Obfuscated x86 32bit__:
+**Obfuscated x86 32bit**:
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/Dotfuscated/winPEAS-x86-release.exe`
 
-__Obfuscated x64 64bit__:
+**Obfuscated x64 64bit**:
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/Dotfuscated/winPEAS-x64-release.exe`
 
 
 # Seatbelt
-__Any CPU arch__ : 
+**Any CPU arch** : 
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/seatbelt-compiled-binary/Seatbelt-AnyCPU.exe`
 
 
-__Obfuscated any CPU arch__:
+**Obfuscated any CPU arch**:
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/seatbelt-compiled-binary/Dotfuscated/Seatbelt-AnyCPU.exe`
 
@@ -45,3 +45,11 @@ __Obfuscated any CPU arch__:
 # Sherlock
 
 # Watson
+**Any CPU arch** : 
+
+`wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/Watson-compiled-binary/Watson.exe`
+
+
+**Obfuscated any CPU arch**:
+
+`wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/Watson-compiled-binary/Dotfuscated/Watson.exe`
