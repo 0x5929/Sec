@@ -25,4 +25,3 @@
    3. Enumeration
    4. Privilege Esclation
    5. Persistence
-   6. Post-Exploitation
