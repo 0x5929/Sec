@@ -23,5 +23,5 @@
    1. Enumeration
    2. Initial Foothold
    3. Enumeration
-   4. Privilege Esclation
+   4. Privilege Esclation/Lateral
    5. Persistence
