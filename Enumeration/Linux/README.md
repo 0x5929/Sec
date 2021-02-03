@@ -4,92 +4,85 @@
 
 # LinEnum
 
-### Usage Instructions
+**Usage Instructions**
 
-### Usage Example
+**Usage Example**
 
-### Comments
+**Downloadable shortcut** : `coming soon`
 
-### Downloadable shortcut
-`coming soon`
+**Original Repo for the latest version**
 
-### Original Repo for the latest version
+**Comments**
 
 # linux-exploit-suggester
 
-### Usage Instructions
+**Usage Instructions**
 
-### Usage Example
+**Usage Example**
 
-### Comments
+**Downloadable shortcut** : `coming soon`
 
-### Downloadable shortcut
-`coming soon`
+**Original Repo for the latest version**
 
-### Original Repo for the latest version
+**Comments**
 
 # linux-exploit-suggester-2
 
-### Usage Instructions
+**Usage Instructions**
 
-### Usage Example
+**Usage Example**
 
-### Comments
+**Downloadable shortcut** : `coming soon`
 
-### Downloadable shortcut
-`coming soon`
+**Original Repo for the latest version**
 
-### Original Repo for the latest version
+**Comments**
 
 # linuxprivchecker
 
-### Usage Instructions
+**Usage Instructions**
 
-### Usage Example
+**Usage Example**
 
-### Comments
+**Downloadable shortcut** : `coming soon`
 
-### Downloadable shortcut
-`coming soon`
+**Original Repo for the latest version**
 
-### Original Repo for the latest version
+**Comments**
 
 # linux smart enumeration
 
-### Usage Instructions
+**Usage Instructions**
 
-### Usage Example
+**Usage Example**
 
-### Comments
+**Downloadable shortcut** : `coming soon`
 
-### Downloadable shortcut
-`coming soon`
+**Original Repo for the latest version**
 
-### Original Repo for the latest version
+**Comments**
 
 # unixprivchecker
 
-### Usage Instructions
+**Usage Instructions**
 
-### Usage Example
+**Usage Example**
 
-### Comments
+**Downloadable shortcut** : `coming soon`
 
-### Downloadable shortcut
-`coming soon`
+**Original Repo for the latest version**
 
-### Original Repo for the latest version
+**Comments**
 
 # LinPEAS
 
-### Usage Instructions
+**Usage Instructions**
 
-### Usage Example
+**Usage Example**
 
-### Comments
 
-### Downloadable shortcut
-`coming soon`
+**Downloadable shortcut** : `coming soon`
 
-### Original Repo for the latest version
+**Original Repo for the latest version**
 
+**Comments**
