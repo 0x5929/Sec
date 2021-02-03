@@ -4,6 +4,8 @@
 
 **Downloadable shortcut** : `coming soon`
 
+**Usage Instruction** : `coming soon`
+
 **Usage Examples** : 
 
 ```
@@ -17,6 +19,8 @@ coming soon
 
 **Downloadable shortcut** : `coming soon`
 
+**Usage Instruction** : `coming soon`
+
 **Usage Examples** : 
 
 ```
@@ -29,6 +33,9 @@ coming soon
 # Sysinternals
 
 **Downloadable shortcut** : `coming soon`
+
+**Usage Instruction** : `coming soon`
+
 **Usage Examples** : 
 
 ```
