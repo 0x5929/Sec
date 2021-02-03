@@ -80,3 +80,16 @@
 
 ### Original Repo for the latest version
 
+# LinPEAS
+
+### Usage Instructions
+
+### Usage Example
+
+### Comments
+
+### Downloadable shortcut
+`coming soon`
+
+### Original Repo for the latest version
+
