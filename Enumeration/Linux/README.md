@@ -10,6 +10,9 @@
 
 ### Comments
 
+### Downloadable shortcut
+`coming soon`
+
 ### Original Repo for the latest version
 
 # linux-exploit-suggester
@@ -19,6 +22,9 @@
 ### Usage Example
 
 ### Comments
+
+### Downloadable shortcut
+`coming soon`
 
 ### Original Repo for the latest version
 
@@ -30,6 +36,9 @@
 
 ### Comments
 
+### Downloadable shortcut
+`coming soon`
+
 ### Original Repo for the latest version
 
 # linuxprivchecker
@@ -39,6 +48,9 @@
 ### Usage Example
 
 ### Comments
+
+### Downloadable shortcut
+`coming soon`
 
 ### Original Repo for the latest version
 
@@ -50,6 +62,9 @@
 
 ### Comments
 
+### Downloadable shortcut
+`coming soon`
+
 ### Original Repo for the latest version
 
 # unixprivchecker
@@ -59,6 +74,9 @@
 ### Usage Example
 
 ### Comments
+
+### Downloadable shortcut
+`coming soon`
 
 ### Original Repo for the latest version
 
