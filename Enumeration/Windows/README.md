@@ -5,6 +5,7 @@ Some shortcuts to download some of the binaries in this sub directory:
 
 
 # WINPEAS
+### Downloadable links:
 **Any CPU arch**: 
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/winPEAS-AnyCPU-release.exe`
@@ -29,8 +30,19 @@ Some shortcuts to download some of the binaries in this sub directory:
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/Dotfuscated/winPEAS-x64-release.exe`
 
+### Usage Instructions : `coming up`
+
+### Usage Example:
+```
+coming up
+
+```
+### Original Repo for the latest version
+
+### Comments
 
 # Seatbelt
+### Downloadable links:
 **Any CPU arch** : 
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/seatbelt-compiled-binary/Seatbelt-AnyCPU.exe`
@@ -40,11 +52,48 @@ Some shortcuts to download some of the binaries in this sub directory:
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/seatbelt-compiled-binary/Dotfuscated/Seatbelt-AnyCPU.exe`
 
+### Usage Instructions : `coming up`
+
+### Usage Example:
+```
+coming up
+
+```
+### Original Repo for the latest version
+
+### Comments
+
 # Powerup
+### Downloadable links: 
+
+### Usage Instructions : `coming up`
+
+### Usage Example:
+```
+coming up
+
+```
+### Original Repo for the latest version
+
+### Comments
 
 # Sherlock
 
+### Downloadable links: 
+
+### Usage Instructions : `coming up`
+
+### Usage Example:
+```
+coming up
+
+```
+### Original Repo for the latest version
+
+### Comments
+
 # Watson
+## Downloadable links: 
 **Any CPU arch** : 
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/Watson-compiled-binary/Watson.exe`
@@ -53,3 +102,30 @@ Some shortcuts to download some of the binaries in this sub directory:
 **Obfuscated any CPU arch**:
 
 `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/Watson-compiled-binary/Dotfuscated/Watson.exe`
+
+
+### Usage Instructions : `coming up`
+
+### Usage Example:
+```
+coming up
+
+```
+### Original Repo for the latest version
+
+### Comments
+
+# PowerUp
+## Downloadable links : `coming soon`
+
+
+### Usage Instructions : `coming up`
+
+### Usage Example:
+```
+coming up
+
+```
+### Original Repo for the latest version
+
+### Comments
