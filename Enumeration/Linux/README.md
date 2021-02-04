@@ -404,18 +404,77 @@ I: [file] Generating file cache...
 **Original Repo for the latest version** [pentestmonkey/unix-privesc-check](https://github.com/pentestmonkey/unix-privesc-check)
 
 **Comments**
-> This tool needs to be downloaded to target machine as a zip file, unzip it, and run checks
+> This tool needs to be downloaded to target machine as a zip file, unzip it, and run checks. The full checks are also rather slow.
 
 
 # LinPEAS
 
 **Usage Instructions**
+```
+user@debian:/dev/shm$ bash linpeas.sh -h
+Enumerate and search Privilege Escalation vectors.
+This tool enum and search possible misconfigurations (known vulns, user, processes and file permissions, special file permissions, readable/writable files, bruteforce other users(top1000pwds), passwords...) inside the host and highlight possible misconfigurations with colors.
+      -h To show this message
+      -q Do not show banner
+      -a All checks (1min of processes and su brute) - Noisy mode, for CTFs mainly
+      -s SuperFast (don't check some time consuming checks) - Stealth mode
+      -w Wait execution between big blocks
+      -n Do not export env variables related with history and do not check Internet connectivity
+      -P Indicate a password that will be used to run 'sudo -l' and to bruteforce other users accounts via 'su'
+      -o Only execute selected checks (SysI, Devs, AvaSof, ProCronSrvcsTmrsSocks, Net, UsrI, SofI, IntFiles). Select a comma separated list.
+      -L Force linpeas execution.
+      -M Force macpeas execution.
+      -d <IP/NETMASK> Discover hosts using fping or ping. Ex: -d 192.168.0.1/24
+      -p <PORT(s)> -d <IP/NETMASK> Discover hosts looking for TCP open ports (via nc). By default ports 22,80,443,445,3389 and another one indicated by you will be scanned (select 22 if you don't want to add more). You can also add a list of ports. Ex: -d 192.168.0.1/24 -p 53,139
+      -i <IP> [-p <PORT(s)>] Scan an IP using nc. By default (no -p), top1000 of nmap will be scanned, but you can select a list of ports instead. Ex: -i 127.0.0.1 -p 53,80,443,8000,8080
+       Notice that if you select some network action, no PE check will be performed
+
+user@debian:/dev/shm$ 
+
+```
 
 **Usage Example**
+```
+user@debian:/dev/shm$ bash linpeas.sh -qa                                
+ Starting linpeas. Caching Writable Folders...                                                                                                    
+                                                                         
+                                                                                                                                                  
+                     ▄▄▄▄▄▄▄▄▄▄▄▄▄▄                                                                                                               
+             ▄▄▄▄▄▄▄             ▄▄▄▄▄▄▄▄▄                               
+      ▄▄▄▄▄▄▄      ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄                                                                                                    
+  ▄▄▄▄     ▄ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄                                                                                               
+  ▄    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄                                                                                              
+  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄       ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄                                                                                                ▄▄▄▄▄▄▄▄▄▄▄          ▄▄▄▄▄▄               ▄▄▄▄▄▄ ▄                                                                                              
+  ▄▄▄▄▄▄              ▄▄▄▄▄▄▄▄                 ▄▄▄▄                                                                                               
+  ▄▄                  ▄▄▄ ▄▄▄▄▄                  ▄▄▄                     
+  ▄▄                ▄▄▄▄▄▄▄▄▄▄▄▄                  ▄▄                     
+  ▄            ▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄   ▄▄                                                                                              
+  ▄      ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄                                                                                              
+  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄                                ▄▄▄▄                                                                                              
+  ▄▄▄▄▄  ▄▄▄▄▄                       ▄▄▄▄▄▄     ▄▄▄▄                     
+  ▄▄▄▄   ▄▄▄▄▄                       ▄▄▄▄▄      ▄ ▄▄                     
+  ▄▄▄▄▄  ▄▄▄▄▄        ▄▄▄▄▄▄▄        ▄▄▄▄▄     ▄▄▄▄▄                                                                                              
+  ▄▄▄▄▄▄  ▄▄▄▄▄▄▄      ▄▄▄▄▄▄▄      ▄▄▄▄▄▄▄   ▄▄▄▄▄ 
+   ▄▄▄▄▄▄▄▄▄▄▄▄▄▄        ▄          ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ 
+  ▄▄▄▄▄▄▄▄▄▄▄▄▄                       ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+  ▄▄▄▄▄▄▄▄▄▄▄                         ▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+   ▄▄▄▄▄▄   ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄▄
+        ▄▄▄▄▄▄▄▄      ▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄ 
+             ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+    linpeas v3.0.3 by carlospolop
 
+ADVISORY: This script should be used for authorized penetration testing and/or educational purposes only. Any misuse of this software will not be 
+the responsibility of the author or of any other collaborator. Use it at your own networks and/or with the network owner's permission.
 
-**Downloadable shortcut** : `coming soon`
+Linux Privesc Checklist: https://book.hacktricks.xyz/linux-unix/linux-privilege-escalation-checklist
+ LEGEND:
 
-**Original Repo for the latest version**
+```
+
+**Downloadable shortcut** : `wget https://raw.githubusercontent.com/0x5929/Sec/main/Enumeration/Linux/linpeas.sh`
+
+**Original Repo for the latest version** [carlopolop/linPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 
 **Comments**
+> Super awesome tool!
