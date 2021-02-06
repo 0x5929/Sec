@@ -15,12 +15,17 @@ For a more detailed windows privilege escalation methodology: [Windows-PrivEsc-G
   - instructions: [link me](readme in misc/accesschk.exe)
 
 ### Services
+
+***To query a service's configurations*** `sc qc <service-name>`
+
+***To start or stop a service*** `net <start|stop> <service-name>`
+
 1. Insecure service permissions
     - Description: if a user's permission is allowed to access and modify a service, such as SERVICE_CHANGE_CONFIG, we can change its binary path
     - Requirements: 
-      - service must be running as LocalSystem
+      - service must be running as LocalSystem 
       - SERVICE_CHANGE_CONFIG is within the permission of the user, or the group the user belongs to
-      - ability to query service configurations
+      - ability to query the service configurations
       - ability to start and stop the service
     - Related instructions: 
       - accesschk parameters : `/accepteula -uvwqc` 
@@ -34,6 +39,7 @@ For a more detailed windows privilege escalation methodology: [Windows-PrivEsc-G
        - service must be running as LocalSystem
        - ability to query service configurations
        - write access to **ANY** parent directories that happen after any spaces in the original binary path
+       - ability to query the service configurations
        - ability to start and stop the service
     - Related instructions: 
        - accesschk parameters : `/accepteula -uvwqd` 
@@ -42,8 +48,9 @@ For a more detailed windows privilege escalation methodology: [Windows-PrivEsc-G
 3.  Weak registry permissions
     - Description: if the service itself has a strong ACL, and we are unable to modify, if we have writable access to the service's registry entry, we can also change its binary path
     - Requirements: 
-        - service must be running as LocalSystem (if we are unable to query its config, we might not know until we try executing service for a System shell)
+        - service must be running as LocalSystem 
         - write access to the service's registry entry under: `HKLM\SYSTEM\CurrentControlSet\services\servicename`
+        - ability to query the service configurations
         - ability to start and stop the service
     - Related instructions: 
         - accesschk parameters : `/accepteula -uvwqk` 
@@ -53,8 +60,21 @@ For a more detailed windows privilege escalation methodology: [Windows-PrivEsc-G
           - `/t REG_EXPAND_SZ` : specifies expanded string registry entry type
           - `/d C:\Malicious\path` : specifies the data we want to put inside the registry entry
           - `/f` : forces execution without user interaction/confirmation
-  
-  
+          
+4. Insecure service executable 
+    - Description: If the service binary executable itself is writable by us, we can simply change that to point a malicious path
+    - Requirements: 
+        - service must be running as LocalSystem
+        - write access to the service's executable
+        - ability to query the service configurations
+        - ability to start and stop the service
+    - Related instructions: 
+        - accesschk parameters : `/accepteula -uvwqh` 
+          - `h` is for file or printer share ACL check
+        - copy parameter : `/Y`
+          - `/Y` for no confirmation (usually needed to replace any existing file)
+          
+        
 ### Registry
 
 ### Password Management
