@@ -15,8 +15,8 @@
   
   ### Entire toolset can be downloaded in a fresh Kali install, or tools could be downloaded individually as needed.
   
-   - to retrieve the entire repo of toolsets: `git clone https://github.com/rennitbaby/Sec.git`
-   - to retrieve an individual tool: `wget https://raw.githubusercontent.com/rennitbaby/Sec/main/path/to/script/or/binary`
+   - to retrieve the entire repo of toolsets and instructions: `git clone https://github.com/0x5929/Sec.git`
+   - to retrieve an individual tool: `wget https://raw.githubusercontent.com/0x5929/Sec/main/path/to/script/or/binary`
     
    
    ### Overall pentest methodology 
