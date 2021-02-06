@@ -4,7 +4,7 @@
 
 ### For Linux specific tools, please refer to: 
 
-# Simple Python HTTP Server
+# Simple Python HTTP Server (Runs crossplatform, as long as python2 is available)
 Used for simple file sharing
 
 **Usage Instructions**
