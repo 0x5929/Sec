@@ -111,7 +111,7 @@ For a more detailed windows privilege escalation methodology: [Windows-PrivEsc-G
          - query specific autologon key: `reg query "HKLM\Software\Microsoft\Windows NT\CurrentVersion\winlogon"`
 
 ### Password Management
-1. Registry : Please see the last entry of the Privesc methodology of Registry [Registry-passwords](https://github.com/0x5929/Sec/blob/main/PrivEsc/README.md#L101)
+1. Registry : Please see the last entry of the Privesc methodology of Registry [Registry-passwords](https://github.com/0x5929/Sec/blob/main/PrivEsc/README#L101)
 2. Saved Creds
     - Description: Some users, for the purpose of convenience, will save credentials inside `cmdkey`, then we may run commands as another user using the saved credentials using `runas /savedcred ...`
     - Requirements: 
