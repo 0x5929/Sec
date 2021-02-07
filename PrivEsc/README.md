@@ -242,17 +242,26 @@ create function do_system returns integer soname 'raptor_udf2.so';
        
 3. Writable `/etc/passwd`
     - Description: `/etc/passwd` file takes precedence for password auth because of backward compatibility, if we can write to it, we can replace root password, or create a new root account
+        - note that `/etc/passwd` will most likely take multiple different hashing methods (not too sure) but to be sure, try using `openssl passwd <password>`
+        - `mkpasswd -m sha-512 <password>` works too in the few practice labs I have tried
+        - also, appending to `/etc/passwd` works as well, with UID `0`, since linux can take muliitple user with same UID (different usernames)
     - Requirements: 
-        - 
-    - Related instructions: 
+        - `/etc/passwd` must be writable 
     
 ### Sudo
+1. Sudo Shell Escape Sequences
+    - Description: 
+    - Requirements: 
+    - Related instructions: 
+2. Sudo Environment Variables
+    - Description: 
+    - Requirements: 
+    - Related instructions: 
+    
+### Cronjobs
 
 
 ### SUID/GUID
-
-
-### Cronjobs
 
 
 ### Password & Keys
