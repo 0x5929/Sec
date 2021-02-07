@@ -221,7 +221,31 @@ create function do_system returns integer soname 'raptor_udf2.so';
 
 ### Weak File Permissions
 
-
+1. Readable `/etc/shadow`
+    - Description: if the `/etc/shadow` file has insecure permissions, if we can read it, we can extract root hash to crack it
+    - Requirements: 
+        - `/etc/shadow` must be readable by the low priv user
+        
+    - Related instructions: 
+        - to crack hash using john (note hashcat can do the same as well) `john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt`
+          - note, using hashcat would have been : `hashcat -m 1800 --force <hash> <wordlist>`
+          
+2. Writable `/etc/shadow`
+    - Description: if the `/etc/shadow` file is writable, we can just replace the root hash with another password hash that we can create
+        - note that for `/etc/shadow` most likely needs a a specific hashed format for this to work
+        - using `mkpasswd` would work, remember to hash it using the sha512 
+    - Requirements: 
+        - `/etc/shadow` must be writable
+        - `/etc/shadow` must be readable (preferred because we can extract and also verify hash method of the original `/etc/shadow` file
+    - Related instructions: 
+        - make a new password hash using mkpasswd: `mkpasswd -m sha-512 newpasswordhere`
+       
+3. Writable `/etc/passwd`
+    - Description: `/etc/passwd` file takes precedence for password auth because of backward compatibility, if we can write to it, we can replace root password, or create a new root account
+    - Requirements: 
+        - 
+    - Related instructions: 
+    
 ### Sudo
 
 
