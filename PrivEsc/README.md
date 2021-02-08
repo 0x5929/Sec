@@ -346,19 +346,69 @@ Finding SUID/SGID exectuables in a system: `find / -type f -a \( -perm -u+s -o -
 
 3. Environment Variables
     - Description: 
+    
+    When a command executes and if it executes another command, the second *should* be executed with full path, if not, we can specify the first (original) comamnd's path and place a malicious program in our path to be searched before any other paths. Every command the first command executes will search in our path and executes the malicious program before finding it in its intended path 
+   
     - Requirements: 
+        - SUID binary needs to be calling another command within its binary
+        - the said command needs to be specified **without** its full path
+        
     - Related instructions: 
+        - checking the binary for its contents, looking for internal command executions: `strings /path/to/suid/binary`
+        - note that we did not use the previous strace command, because it only looks for open/access system calls and unavailable library loading with the No such file or directory error. 
+            - however, if we modify the command to `strace /path/to/suid/binary 2>&1 | egrep -i 'open|access|no such file|execve'` we might be able to find its internal calling witht he execve system call ( that is if it used execve and not another systemcall to execute system commands)
+         - loading a malicious current directory that contains the malicious program to be run as the path: 
+            - `PATH=.:$PATH /path/to/vuln/suid/binary`
+            - make sure the malicious program has the exact same program name revealed by `strings` command so it can be used before the actual program is looked up in its actual directory path
 
-4. Abusing shell features: 
+4. Abusing shell features via exporting functio name: 
+    - Description: 
+    
+     When a command executes and if it executes another command, the second *should* be executed with full path, if it is not, we can exploit it with the ways described above. But if it is, and depending on the bash version number, we may still be able to exploit it using a function definition within bash (version < 4.2-048), the function definition names can contain slashes, so we can rename the entire command path as our funciton name, which *will take precedence* before the actual command is looked up by its path
+    - Requirements: 
+      - a suid/sgid binary that contains an internal command calling (of system comamnds), verified by `strings` or `strace`
+      - bash version < 4.2-048
+    - Related instructions: 
+      - checking the binary for its contents, looking for internal command executions: `strings /path/to/suid/binary`
+      - setting function name as an internal command name with full path: 
+          - `function /path/to/command { /bin/bash -p; }`
+              - since we are exploit SUID programs, they should be root owned, and have elevated priv as it is executing, the `/bin/bash -p` will preserve calling program/user's privilege and will give us a root shell
+          - export the function, so it will take precedence over any command called (bash intended internal feature)
+              - `export -f /path/to/command`
+
+5. Abusing shell features via debugging prompt
+    - Description: If a SUID program contains SUID/System logic (always a bad idea) and we have bash version < 4.4, we can set the program to its debugging mode, while resetting and changing its environment, to execute elevated commands inside the debugging prompt. 
+    - Requirements:
+        - SUID/SGID program **must** contain a logic in the order of: suid/sgid -> system (i wonder if this will work with execve too)
+        - bash version < 4.4
+    - Related instructions:
+        - resetting environment, setting debug mode on and setting a debugging prompt with shell commands to be evlevated executed when the binary executes via system: 
+            - `env -i SHELLOPTS=xtrace PS4='$(cp /bin/bash /tmp/rootbash; chmod +xs /tmp/rootbash)' /path/to/vuln/suid`
+                - `env -i` sets a modified environment while *i*gnoring parent shell's environment for a command to executes
+                - `SHELLOPTS=xtrace` turning debug mode on
+                - `PS4=$(commands)` Debugging prompt containing system commands to be executed as the command's priv, hence if the priv is elevated via SUID, PS4 would be executed with elevated privilege
+                
+### Password & Keys
+1. History Files:
     - Description: 
     - Requirements: 
     - Related instructions: 
 
-### Password & Keys
+2. Configuration Files: 
+    - Description: 
+    - Requirements: 
+    - Related instructions: 
+    
+3. SSH Keys: 
+    - Description: 
+    - Requirements: 
+    - Related instructions: 
 
 
 ### NFS
-
+    - Description: 
+    - Requirements: 
+    - Related instructions: 
 
 ### Kernel Exploits
 
