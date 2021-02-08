@@ -320,6 +320,39 @@ create function do_system returns integer soname 'raptor_udf2.so';
 
 ### SUID/GUID
 
+Finding SUID/SGID exectuables in a system: `find / -type f -a \( -perm -u+s -o -perm -g+s \) -printf '%f\t%p\t%u\t%g\t%M\n' | column -t`
+    - `type f` : type file
+    - `-a` : logical and operator
+    - `-perm -u+s` : matching permission with **at least** SUID bit on, note that `u+s` matches exactly the permission, and is not at least like `-u+s`
+    - `-perm -g+s` : same as above, but for SGID binaries
+    - `printf '%f\t%p\t%u\t%g\t%M\n'`: format printing of filename, tab, full path, tab, user, tab, group, tab, permission, new line
+    - `column -t` : formats output to a table
+    
+1. Known Exploits
+    - Description: After finding all SUID and SGID executables, find ones that are out of place, `searchsploit` known exploits and exploit accordingly
+    - Requirements: 
+        - a vulnerable SUID/SGID binary within the versions tested with its existing version
+    - Related instructions: 
+        - searchsploit command: `searchsploit <keyword>`
+
+2. Shared Object Injection
+    - Description: if a SUID/SGID binary tries and fails to load a share object file during its execution, and we have write access to the directory where the so file is loaded, then we can inject our own so by creating one inside the directory its looking for in.
+    - Requirements: 
+        - the binary must be loading a shared object file , that we can either overwrite, or that it failed loading it and we have access to the so file's parent directory so we can create the shared object file
+    - Related instructions: 
+        - the strace command, to trace the system calls of a program: `strace /path/to/suid/binary 2>&1 | egrep -i "open|access|no such file"`
+            - `2>&1` redirects error to output, so we can evalute with egrep after the pipe
+            - `open|access|no such file` looking for system calls that are : `open` `access` `no such file` to find out what files the  binary tries to load and access, or fails to load/access because the file is not found
+
+3. Environment Variables
+    - Description: 
+    - Requirements: 
+    - Related instructions: 
+
+4. Abusing shell features: 
+    - Description: 
+    - Requirements: 
+    - Related instructions: 
 
 ### Password & Keys
 
