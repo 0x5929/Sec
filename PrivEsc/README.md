@@ -377,7 +377,9 @@ Finding SUID/SGID exectuables in a system: `find / -type f -a \( -perm -u+s -o -
               - `export -f /path/to/command`
 
 5. Abusing shell features via debugging prompt
-    - Description: If a SUID program contains SUID/System logic (always a bad idea) and we have bash version < 4.4, we can set the program to its debugging mode, while resetting and changing its environment, to execute elevated commands inside the debugging prompt. 
+    - Description: 
+    
+    If a SUID program contains SUID/System logic (always a bad idea) and we have bash version < 4.4, we can set the program to its debugging mode, while resetting and changing its environment, to execute elevated commands inside the debugging prompt. 
     - Requirements:
         - SUID/SGID program **must** contain a logic in the order of: suid/sgid -> system (i wonder if this will work with execve too)
         - bash version < 4.4
@@ -390,25 +392,78 @@ Finding SUID/SGID exectuables in a system: `find / -type f -a \( -perm -u+s -o -
                 
 ### Password & Keys
 1. History Files:
-    - Description: 
+    - Description: When a user types directory into the terminal, it is all saved within its history files (therefore never a good idea to do that without a tty prompting for password), if we can view the history file, we can look for passwords
+        - note that if a password is used for one program, lets try it for the system passwords, or other programs, we never know if the user is reusing its passwords
+    
     - Requirements: 
+        - `~/.bash_history` or other history files need to be readable by the low priv user
+        - `~/.bash_history` or other history files must contain sensitive information
+        
     - Related instructions: 
+        - viewing all history files in user directory: `cat ~/.*history | less`
 
 2. Configuration Files: 
-    - Description: 
+    - Description: Configuration files are used by programs to automate startup and program configurations. Some config files contain authentication process, which they may store the credentials in the files themselves (that is why we should always secure configuration files) 
     - Requirements: 
+        - configuration file is readable by user
+        - configuratoin file contains senstive data
+        
     - Related instructions: 
+        - looking for sensitive data within a confiuration file: `cat /path/to/config/file | egrep -i 'pass(word)?|user(name)?|d(ata)?b(ase)?|email'`
     
 3. SSH Keys: 
-    - Description: 
+    - Description: SSH Private keys (unencrypted) can be used to log into SSH without a prompt for password. If ssh key is readable, we can just log in as a different user via ssh
+ 
     - Requirements: 
+        - SSH key private key must be readable
+        - SSH key must not be encrypted with a passphrase (if it is, we may need to decrypt it first
+        - SSH host must be configured to allow key authenication (should be by default)
+        
     - Related instructions: 
-
-
+        - changing the permission to read/write by user only (some ssh host require that security permission in order to authenicate using ssh keys)
+            - `chmod 600 ssh_key`
+                - `0` no access 
+                - `1` execute access
+                - `2` write access
+                - `4` read access
 ### NFS
-    - Description: 
-    - Requirements: 
-    - Related instructions: 
 
+   - Description: If a linux system contains exportable file system via NFS and that if the root_squash setting is disabled with `no_root_squash` anybody on the network who is root in their own system can act as root on the NFS
+      - note although we are root, if we only execute a script as SUID, for security purposes the privileges are dropped, **SUID only works on binaries**
+   - Requirements: 
+      - there must be a NFS that is exported 
+      - `no_root_squash` must be configured for the exported Network FileSystem
+      
+   - Related instructions: 
+      - to view linux server's exported NFS (before initial foothold) : `showmount -e <target-ip>`
+          - `-e` export list
+      - to view linux server's exported NFS (after initial foothold): `cat /etc/exports`
+          - note for `no_root_squash`
+      - to further enumerate nfs (for versions allowed) (before initial foothold, port 111 rpc must be open for this: `rpcinfo -p <IP>`
+      
+      - to mount to the NFS using `mount`: `mount -t nfs -o rw,vers=2 host:/nfs/host/exported/file/directory /client/file/directory/to/mount`
+          - `-t nfs` type mounted: nfs
+          - `-o` options
+          - `vers` version number
+          - `host:/tmp` sample nfs server mount poinpt
+          - `/tmp/nfs` sample nfs client mount point
+      - to unmount a nfs file system: `umount -l /tmp/nfs`
+          - `-l` lazy unmount
+          - `/tmp/nfs` sample nfs client mount point
+      - to check for system mount points: `df -h` Diskformat? humanreadable 
+      
 ### Kernel Exploits
 
+- Description: 
+
+ When all else fails aka everything is done correctly on the system, no configuration, file, cron, suid, sudo, service, or nfs weaknesses. We may be able to elevate if the user did not properly update/patch the OS. We may run enumeration tools for exploit *suggestions* 
+ 
+ *Please note that kernel exploits are not stable, very easily can crash the system, which will need a reboot to resolve.*
+
+- Requirements: 
+    - when all other priv esc technique fails
+    - if we are talking about the famous dirty cow: kernel < 4.8.3 are vulnerable
+      - note if host system is unable to compile and build any exploits, try it on kali (if same architecture)
+
+- Related instructions: 
+    - please see [linux-enumeration-scripts](linux-enumeration-scripts-exploit-suggester) 
