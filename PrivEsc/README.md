@@ -462,7 +462,7 @@ Finding SUID/SGID exectuables in a system: `find / -type f -a \( -perm -u+s -o -
 
 - Requirements: 
     - when all other priv esc technique fails
-    - if we are talking about the famous dirty cow: kernel < 4.8.3 are vulnerable
+    - if we are talking about the famous dirty cow: kernel < 4.8.3 are vulnerable (before 2018)
       - note if host system is unable to compile and build any exploits, try it on kali (if same architecture)
 
 - Related instructions: 
