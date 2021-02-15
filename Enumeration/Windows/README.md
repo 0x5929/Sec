@@ -8,38 +8,31 @@ Some shortcuts to download some of the binaries in this sub directory:
 ### Downloadable links:
 **Any CPU arch**: 
 
-`wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/winPEAS-AnyCPU-release.exe`
+`wget https://raw.githubusercontent.com/0x5929/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/winPEAS-AnyCPU-release.exe`
 
 **x86 32bit**: 
 
-`wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/winPEAS-x86-release.exe`
+`wget https://raw.githubusercontent.com/0x5929/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/winPEAS-x86-release.exe`
 
 **x64 64bit**: 
 
-`wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/winPEAS-x64-release.exe`
+`wget https://raw.githubusercontent.com/0x5929/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/winPEAS-x64-release.exe`
 
 **Obfuscated any CPU arch**:
 
-`wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/Dotfuscated/winPEAS-AnyCPU-release.exe`
+`wget https://raw.githubusercontent.com/0x5929/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/Dotfuscated/winPEAS-AnyCPU-release.exe`
 
 **Obfuscated x86 32bit**:
 
-`wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/Dotfuscated/winPEAS-x86-release.exe`
+`wget https://raw.githubusercontent.com/0x5929/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/Dotfuscated/winPEAS-x86-release.exe`
 
 **Obfuscated x64 64bit**:
 
-`wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/Dotfuscated/winPEAS-x64-release.exe`
+`wget https://raw.githubusercontent.com/0x5929/Sec/main/Enumeration/Windows/WINPEASany-compiled-bin/Release/Dotfuscated/winPEAS-x64-release.exe`
 
-### Usage Instructions : `coming up`
 
-### Usage Example:
-```
-coming up
+### Original Repo for the latest version and usage samples: [carlospolop/winPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS)
 
-```
-### Original Repo for the latest version
-
-### Comments
 
 # Seatbelt
 ### Downloadable links:
@@ -50,82 +43,38 @@ coming up
 
 **Obfuscated any CPU arch**:
 
-`wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/seatbelt-compiled-binary/Dotfuscated/Seatbelt-AnyCPU.exe`
+`wget https://raw.githubusercontent.com/0x5929/Sec/main/Enumeration/Windows/seatbelt-compiled-binary/Dotfuscated/Seatbelt-AnyCPU.exe`
 
-### Usage Instructions : `coming up`
+### Original Repo for the latest version and usage samples: [GhostPack/Seatbelt](https://github.com/GhostPack/Seatbelt)
 
-### Usage Example:
-```
-coming up
-
-```
-### Original Repo for the latest version
-
-### Comments
 
 # Powerup
 ### Downloadable links: 
+`wget https://raw.githubusercontent.com/0x5929/Sec/main/Enumeration/Windows/PowerUp.ps1`
 
-### Usage Instructions : `coming up`
+### Original Repo for the latest version and usage samples: [PowerShellMafia/PowerSploit](https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc)
 
-### Usage Example:
-```
-coming up
-
-```
-### Original Repo for the latest version
-
-### Comments
 
 # Sherlock
 
 ### Downloadable links: 
+`coming up`
 
-### Usage Instructions : `coming up`
 
-### Usage Example:
-```
-coming up
-
-```
-### Original Repo for the latest version
-
-### Comments
+### Original Repo for the latest version and usage samples: [rasta-mouse/Sherlock](https://github.com/rasta-mouse/Sherlock)
 
 # Watson
 ## Downloadable links: 
 **Any CPU arch** : 
 
-`wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/Watson-compiled-binary/Watson.exe`
+`wget https://raw.githubusercontent.com/0x5929/Sec/main/Enumeration/Windows/Watson-compiled-binary/Watson.exe`
 
 
 **Obfuscated any CPU arch**:
 
-`wget https://raw.githubusercontent.com/rennitbaby/Sec/main/Enumeration/Windows/Watson-compiled-binary/Dotfuscated/Watson.exe`
+`wget https://raw.githubusercontent.com/0x5929/Sec/main/Enumeration/Windows/Watson-compiled-binary/Dotfuscated/Watson.exe`
 
 
-### Usage Instructions : `coming up`
-
-### Usage Example:
-```
-coming up
-
-```
-### Original Repo for the latest version
-
-### Comments
-
-# PowerUp
-## Downloadable links : `coming soon`
+### Original Repo for the latest version : [rasta-mouse/watson](https://github.com/rasta-mouse/Watson)
 
 
-### Usage Instructions : `coming up`
-
-### Usage Example:
-```
-coming up
-
-```
-### Original Repo for the latest version
-
-### Comments
