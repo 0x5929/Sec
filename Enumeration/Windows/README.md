@@ -58,8 +58,7 @@ Some shortcuts to download some of the binaries in this sub directory:
 # Sherlock
 
 ### Downloadable links: 
-`coming up`
-
+`wget https://raw.githubusercontent.com/0x5929/Sec/main/Enumeration/Windows/sherlock.py`
 
 ### Original Repo for the latest version and usage samples: [rasta-mouse/Sherlock](https://github.com/rasta-mouse/Sherlock)
 
