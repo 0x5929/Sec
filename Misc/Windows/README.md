@@ -16,3 +16,7 @@
 
 `wget https://raw.githubusercontent.com/0x5929/Sec/main/Misc/Windows/PuTTY/putty-x86.zip`
 
+
+# Mr. Tib3rus's Udemy Course tools: 
+
+[Dropbox location](https://www.dropbox.com/s/zav0syvpq5tepbz/tools.zip?dl=0
