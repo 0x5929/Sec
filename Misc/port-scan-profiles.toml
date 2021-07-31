@@ -1,0 +1,33 @@
+[default]
+
+    [default.nmap-quick]
+
+    # this scan will only scan default TCP ports, for a quick evaluation, so pentester can get started right away.
+
+        [default.nmap-quick.service-detection]
+        command = 'nmap {nmap_extra} -sV -sC --version-all -oN "{scandir}/_nmap_quick_tcp.txt" -oX "{scandir}/xml/_nmap_quick_tcp.xml" {address}'
+        pattern = '^(?P<port>\d+)\/(?P<protocol>(tcp|udp))(.*)open(\s*)(?P<service>[\w\-\/]+)(\s*)(.*)$'
+
+    [default.nmap-complete]
+
+    # note for the scans in the nmap-complete profile, only the initial scan is matched for patterns
+    # all other scans, ie port/vuln scan will NOT match, rather it will only be additional information that we can inspect after
+
+        [default.nmap-complete.port-scan]
+        command = 'nmap {nmap_extra} -p- -oN "{scandir}/_nmap_complete_tcp_initial.txt" -oX "{scandir}/xml/_nmap_complete_tcp_initial.xml" {address}'
+        pattern = '^(?P<port>\d+)\/(?P<protocol>(tcp|udp))(.*)open(\s*)(?P<service>[\w\-\/]+)(\s*)(.*)$'
+
+	[default.nmap-complete.service-detection]
+	command = 'nmap {nmap_extra} -p {ports} -sC -sV --version-all --osscan-guess -oN "{scandir}/_nmap_complete_tcp_port.txt" -oX "{scandir}/xml/_nmap_complete_tcp_port.xml" {address}; nmap {nmap_extra} -p {ports} -sC -sV --script=vuln -oN "{scandir}/_nmap_complete_tcp_vuln.txt" -oX "{scandir}/xml/_nmap_complete_tcp_vuln.xml" {address}'
+        pattern = '^(?P<port>\d+)\/(?P<protocol>(tcp|udp))(.*)open(\s*)(?P<service>[\w\-\/]+)(\s*)(.*)$'
+
+
+    [default.nmap-udp]
+
+    # instead of top 20, we will scan top 100 or 1000? The default amount of ports to be scanned when not specified
+
+        [default.nmap-udp.service-detection]
+        command = 'nmap -sU -oN "{scandir}/_nmap_complete_udp.txt" -oX "{scandir}/xml/_nmap_complete_udp.xml" {address}'
+        pattern = '^(?P<port>\d+)\/(?P<protocol>(tcp|udp))(.*)open(\s*)(?P<service>[\w\-\/]+)(\s*)(.*)$'
+
+
